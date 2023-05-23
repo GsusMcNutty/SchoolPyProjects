@@ -7,7 +7,7 @@ def character_id(string):
     for i in string:
         if 96 <= ord(i) <= 123 or ord(i) == 33:
             non_alphabet_count += 1
-            # print(i, ord(i))
+            # print(i, ord(i))2
     return non_alphabet_count
 
 
