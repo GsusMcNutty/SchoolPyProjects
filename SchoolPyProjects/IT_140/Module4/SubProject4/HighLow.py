@@ -1,11 +1,11 @@
 user_input = int(input('Input a value between 1-10\n'))
-condition = 4
+number = 4
 
-while user_input != condition:
-    if user_input > condition:
+while user_input != number:
+    if user_input > number:
         print('Lower.')
-    if user_input < condition:
+    if user_input < number:
         print('Higher.')
     user_input = int(input('Guess again.\n'))
 
-print('It was {}! You guessed it correctly!'.format(condition))
+print('It was {}! You guessed it correctly!'.format(number))
