@@ -25,60 +25,13 @@ def move_room(direction, current_location, rooms_dict):
     return rooms_dict.get(current_location).get(direction)
 
 
+def direction_commands(cardinals):
+    cardinals = str(cardinals)
+    cardinals = cardinals[cardinals.index('[') + 1: cardinals.index(']')]
+    return cardinals.replace("'", '').title()
+
 if __name__ == '__main__':
-    rooms = {'tower room': {'north': 'guard quarters'},
 
-             'basement': {'east': 'kitchen'},
-
-             'kitchen': {'north': 'dining room',
-                         'south': 'servant quarters',
-                         'east': 'guard quarters',
-                         'west': 'basement'
-                         },
-
-             'sitting room': {'north': 'main hall',
-                              'east': 'dining room',
-                              'west': 'library'
-                              },
-
-             'dining room': {'west': 'sitting room',
-                             'south': 'kitchen'
-                             },
-
-             'foyer': {'west': 'trophy hall',
-                       'south': 'main hall'
-                       },
-
-             'library': {'north': 'study',
-                         'east': 'sitting room'
-                         },
-
-             'study': {'north': 'trophy hall',
-                       'south': 'library'
-                       },
-
-             'servant quarters': {'north': 'kitchen',
-                                  'west': 'living quarters'
-                                  },
-
-             'living quarters': {'east': 'servant quarters',
-                                 'west': 'garden'
-                                 },
-
-             'trophy hall': {'east': 'foyer',
-                             'south': 'study'
-                             },
-
-             'garden': {'east': 'living quarters'},
-
-             'guard quarters': {'south': 'tower room',
-                                'west': 'kitchen'
-                                },
-
-             'main hall': {'north': 'foyer',
-                           'south': 'sitting room'
-                           }
-             }
 
     command_list = ['move', 'wait', 'exit']
     default_command = 'wait'
