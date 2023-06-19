@@ -55,6 +55,36 @@ def room_dictionary():
     return rooms
 
 
+def get_rooms():
+    return room_dictionary()
+
+
+artifacts = {'kitchen': {'shield': "neh'ctik"},
+             'dining room': {'amulet': "moor gnin'id"},
+             'foyer': {'wristband': "re'yof"},
+             'sitting room': {'icon': "moor gnit'tis"},
+             'study': {'sword': "y'duts"},
+             'library': {'wand': "y'rarb'il"}
+             }
+
+
+def get_artifacts():
+    return artifacts
+
+
 def command_list():
-    commands = ['move', 'wait', 'exit', 'quit']
-    return commands
+    command = ['move', 'wait', 'exit', 'quit', 'search', 'pickup', 'inventory', 'help', 'objectives']
+    return command
+
+
+def instructions():
+    return ("Instructions:\n"
+            "Move through each of the rooms in search of the 6 artifacts to defeat the villain.\n"
+            "Movement is done by declaring the 'move' command, then a cardinal direction.\n"
+            "You can search a room for anything of note by using the 'search' command.\n"
+            "You can pick up an item by using the 'pickup' command.\n"
+            "You can check your inventory at any time by using the 'inventory' command.\n"
+            "Use the 'objectives' command to list the current remaining objectives.\n"
+            "The 'wait' command can be used to set back to a default state.\n"
+            "Commands may be inputted at any time to interrupt another.\n"
+            "Type 'exit' or 'quit' to exit at any time.\n")
